@@ -9,10 +9,10 @@ function withErrorStack(error, stack) {
 }
 
 function logErrors(err, req, res, next) {
-  console.log(err);
   next(err);
 }
 
+// eslint-disable-next-line no-unused-vars
 function errorHandler(err, req, res, next) {
   // eslint-disable-line
   res.status(err.status || 500);
